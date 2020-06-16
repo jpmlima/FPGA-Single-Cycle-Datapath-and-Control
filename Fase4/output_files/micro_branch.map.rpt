@@ -1,0 +1,596 @@
+Analysis & Synthesis report for micro_branch
+Wed Jun  3 07:21:32 2020
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Mux2_1:wa_mux
+ 13. Parameter Settings for User Entity Instance: Mux2_1:alu_mux
+ 14. Parameter Settings for User Entity Instance: Mux2_1:alu_mux2
+ 15. Parameter Settings for User Entity Instance: Alu:alu
+ 16. Parameter Settings for User Entity Instance: Mux2_1:mem2reg
+ 17. Parameter Settings for Inferred Entity Instance: Alu:alu|lpm_mult:Mult0
+ 18. Parameter Settings for Inferred Entity Instance: Alu:alu|lpm_mult:Mult1
+ 19. lpm_mult Parameter Settings by Entity Instance
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2019  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Jun  3 07:21:32 2020       ;
+; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
+; Revision Name                      ; micro_branch                                ;
+; Top-level Entity Name              ; Datapath                                    ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 4,084                                       ;
+;     Total combinational functions  ; 1,994                                       ;
+;     Dedicated logic registers      ; 2,132                                       ;
+; Total registers                    ; 2132                                        ;
+; Total pins                         ; 32                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 2                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; Datapath           ; micro_branch       ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                     ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
+; src/Datapath.vhd                 ; yes             ; User VHDL File               ; /home/xenomai/Desktop/LSDP13/Fase4/src/Datapath.vhd              ;         ;
+; src/Mux2_1.vhd                   ; yes             ; User VHDL File               ; /home/xenomai/Desktop/LSDP13/Fase4/src/Mux2_1.vhd                ;         ;
+; src/Pc.vhd                       ; yes             ; User VHDL File               ; /home/xenomai/Desktop/LSDP13/Fase4/src/Pc.vhd                    ;         ;
+; src/Registers.vhd                ; yes             ; User VHDL File               ; /home/xenomai/Desktop/LSDP13/Fase4/src/Registers.vhd             ;         ;
+; src/SignExtend.vhd               ; yes             ; User VHDL File               ; /home/xenomai/Desktop/LSDP13/Fase4/src/SignExtend.vhd            ;         ;
+; src/Alu.vhd                      ; yes             ; User VHDL File               ; /home/xenomai/Desktop/LSDP13/Fase4/src/Alu.vhd                   ;         ;
+; src/IMemory.vhd                  ; yes             ; User VHDL File               ; /home/xenomai/Desktop/LSDP13/Fase4/src/IMemory.vhd               ;         ;
+; src/DMemory.vhd                  ; yes             ; User VHDL File               ; /home/xenomai/Desktop/LSDP13/Fase4/src/DMemory.vhd               ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; /opt/altera/19.1/quartus/libraries/megafunctions/lpm_mult.tdf    ;         ;
+; aglobal191.inc                   ; yes             ; Megafunction                 ; /opt/altera/19.1/quartus/libraries/megafunctions/aglobal191.inc  ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; /opt/altera/19.1/quartus/libraries/megafunctions/lpm_add_sub.inc ;         ;
+; multcore.inc                     ; yes             ; Megafunction                 ; /opt/altera/19.1/quartus/libraries/megafunctions/multcore.inc    ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; /opt/altera/19.1/quartus/libraries/megafunctions/bypassff.inc    ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; /opt/altera/19.1/quartus/libraries/megafunctions/altshift.inc    ;         ;
+; db/mult_aat.tdf                  ; yes             ; Auto-Generated Megafunction  ; /home/xenomai/Desktop/LSDP13/Fase4/db/mult_aat.tdf               ;         ;
+; db/mult_73t.tdf                  ; yes             ; Auto-Generated Megafunction  ; /home/xenomai/Desktop/LSDP13/Fase4/db/mult_73t.tdf               ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 4,084     ;
+;                                             ;           ;
+; Total combinational functions               ; 1994      ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 1592      ;
+;     -- 3 input functions                    ; 373       ;
+;     -- <=2 input functions                  ; 29        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 1945      ;
+;     -- arithmetic mode                      ; 49        ;
+;                                             ;           ;
+; Total registers                             ; 2132      ;
+;     -- Dedicated logic registers            ; 2132      ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 32        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 2         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 2132      ;
+; Total fan-out                               ; 14035     ;
+; Average fan-out                             ; 3.35      ;
++---------------------------------------------+-----------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                   ;
++------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                      ; Entity Name ; Library Name ;
++------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------+-------------+--------------+
+; |Datapath                          ; 1994 (0)            ; 2132 (0)                  ; 0           ; 2            ; 2       ; 0         ; 32   ; 0            ; |Datapath                                                ; Datapath    ; work         ;
+;    |Alu:alu|                       ; 197 (197)           ; 0 (0)                     ; 0           ; 2            ; 2       ; 0         ; 0    ; 0            ; |Datapath|Alu:alu                                        ; Alu         ; work         ;
+;       |lpm_mult:Mult0|             ; 0 (0)               ; 0 (0)                     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |Datapath|Alu:alu|lpm_mult:Mult0                         ; lpm_mult    ; work         ;
+;          |mult_aat:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |Datapath|Alu:alu|lpm_mult:Mult0|mult_aat:auto_generated ; mult_aat    ; work         ;
+;       |lpm_mult:Mult1|             ; 0 (0)               ; 0 (0)                     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |Datapath|Alu:alu|lpm_mult:Mult1                         ; lpm_mult    ; work         ;
+;          |mult_73t:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |Datapath|Alu:alu|lpm_mult:Mult1|mult_73t:auto_generated ; mult_73t    ; work         ;
+;    |DMemory:data_memory|           ; 1654 (1654)         ; 2048 (2048)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|DMemory:data_memory                            ; DMemory     ; work         ;
+;    |IMemory:IMemory|               ; 12 (12)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|IMemory:IMemory                                ; IMemory     ; work         ;
+;    |Mux2_1:alu_mux2|               ; 17 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Mux2_1:alu_mux2                                ; Mux2_1      ; work         ;
+;    |Mux2_1:alu_mux|                ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Mux2_1:alu_mux                                 ; Mux2_1      ; work         ;
+;    |Mux2_1:mem2reg|                ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Mux2_1:mem2reg                                 ; Mux2_1      ; work         ;
+;    |Mux2_1:wa_mux|                 ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Mux2_1:wa_mux                                  ; Mux2_1      ; work         ;
+;    |Pc:pc|                         ; 9 (9)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Pc:pc                                          ; Pc          ; work         ;
+;    |Registers:registers|           ; 84 (84)             ; 64 (64)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Registers:registers                            ; Registers   ; work         ;
++------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary        ;
++---------------------------------------+-------------+
+; Statistic                             ; Number Used ;
++---------------------------------------+-------------+
+; Simple Multipliers (9-bit)            ; 2           ;
+; Simple Multipliers (18-bit)           ; 0           ;
+; Embedded Multiplier Blocks            ; --          ;
+; Embedded Multiplier 9-bit elements    ; 2           ;
+; Signed Embedded Multipliers           ; 1           ;
+; Unsigned Embedded Multipliers         ; 1           ;
+; Mixed Sign Embedded Multipliers       ; 0           ;
+; Variable Sign Embedded Multipliers    ; 0           ;
+; Dedicated Input Shift Register Chains ; 0           ;
++---------------------------------------+-------------+
+Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; IMemory:IMemory|RD[2,3,5]             ; Stuck at GND due to stuck port data_in ;
+; IMemory:IMemory|RD[6]                 ; Merged with IMemory:IMemory|RD[4]      ;
+; Total Number of Removed Registers = 4 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 2132  ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 8     ;
+; Number of registers using Asynchronous Clear ; 8     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 2132  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Datapath|Pc:pc|addr[0]    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mux2_1:wa_mux ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; size           ; 3     ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mux2_1:alu_mux ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; size           ; 8     ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mux2_1:alu_mux2 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; size           ; 8     ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Alu:alu ;
++----------------+-------+-----------------------------+
+; Parameter Name ; Value ; Type                        ;
++----------------+-------+-----------------------------+
+; size           ; 8     ; Signed Integer              ;
++----------------+-------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mux2_1:mem2reg ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; size           ; 8     ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Alu:alu|lpm_mult:Mult0             ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 8            ; Untyped             ;
+; LPM_WIDTHB                                     ; 8            ; Untyped             ;
+; LPM_WIDTHP                                     ; 16           ; Untyped             ;
+; LPM_WIDTHR                                     ; 16           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; mult_aat     ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Alu:alu|lpm_mult:Mult1             ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 8            ; Untyped             ;
+; LPM_WIDTHB                                     ; 8            ; Untyped             ;
+; LPM_WIDTHP                                     ; 16           ; Untyped             ;
+; LPM_WIDTHR                                     ; 16           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; SIGNED       ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; mult_73t     ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                 ;
++---------------------------------------+------------------------+
+; Name                                  ; Value                  ;
++---------------------------------------+------------------------+
+; Number of entity instances            ; 2                      ;
+; Entity Instance                       ; Alu:alu|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 8                      ;
+;     -- LPM_WIDTHB                     ; 8                      ;
+;     -- LPM_WIDTHP                     ; 16                     ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED               ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                     ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                     ;
+;     -- USE_EAB                        ; OFF                    ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                   ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                     ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                     ;
+; Entity Instance                       ; Alu:alu|lpm_mult:Mult1 ;
+;     -- LPM_WIDTHA                     ; 8                      ;
+;     -- LPM_WIDTHB                     ; 8                      ;
+;     -- LPM_WIDTHP                     ; 16                     ;
+;     -- LPM_REPRESENTATION             ; SIGNED                 ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                     ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                     ;
+;     -- USE_EAB                        ; OFF                    ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                   ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                     ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                     ;
++---------------------------------------+------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 32                          ;
+; cycloneiii_ff         ; 2132                        ;
+;     ENA               ; 2124                        ;
+;     ENA CLR SLD       ; 8                           ;
+; cycloneiii_lcell_comb ; 1995                        ;
+;     arith             ; 49                          ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 42                          ;
+;     normal            ; 1946                        ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 10                          ;
+;         2 data inputs ; 12                          ;
+;         3 data inputs ; 331                         ;
+;         4 data inputs ; 1592                        ;
+; cycloneiii_mac_mult   ; 2                           ;
+; cycloneiii_mac_out    ; 2                           ;
+;                       ;                             ;
+; Max LUT depth         ; 20.70                       ;
+; Average LUT depth     ; 12.39                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:09     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+    Info: Processing started: Wed Jun  3 07:21:08 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off micro_branch -c micro_branch
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file src/Datapath.vhd
+    Info (12022): Found design unit 1: Datapath-Behavioral File: /home/xenomai/Desktop/LSDP13/Fase4/src/Datapath.vhd Line: 30
+    Info (12023): Found entity 1: Datapath File: /home/xenomai/Desktop/LSDP13/Fase4/src/Datapath.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file src/Interconnect_tb.vhd
+    Info (12022): Found design unit 1: Interconnect_tb-Stimulus File: /home/xenomai/Desktop/LSDP13/Fase4/src/Interconnect_tb.vhd Line: 14
+    Info (12023): Found entity 1: Interconnect_tb File: /home/xenomai/Desktop/LSDP13/Fase4/src/Interconnect_tb.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file src/Mux2_1.vhd
+    Info (12022): Found design unit 1: Mux2_1-Behavioral File: /home/xenomai/Desktop/LSDP13/Fase4/src/Mux2_1.vhd Line: 13
+    Info (12023): Found entity 1: Mux2_1 File: /home/xenomai/Desktop/LSDP13/Fase4/src/Mux2_1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file src/Pc.vhd
+    Info (12022): Found design unit 1: Pc-Behavioral File: /home/xenomai/Desktop/LSDP13/Fase4/src/Pc.vhd Line: 17
+    Info (12023): Found entity 1: Pc File: /home/xenomai/Desktop/LSDP13/Fase4/src/Pc.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file src/Registers.vhd
+    Info (12022): Found design unit 1: Registers-Behavioral File: /home/xenomai/Desktop/LSDP13/Fase4/src/Registers.vhd Line: 19
+    Info (12023): Found entity 1: Registers File: /home/xenomai/Desktop/LSDP13/Fase4/src/Registers.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file src/SignExtend.vhd
+    Info (12022): Found design unit 1: SignExtend-Behavioral File: /home/xenomai/Desktop/LSDP13/Fase4/src/SignExtend.vhd Line: 10
+    Info (12023): Found entity 1: SignExtend File: /home/xenomai/Desktop/LSDP13/Fase4/src/SignExtend.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file src/Alu.vhd
+    Info (12022): Found design unit 1: Alu-Behavioral File: /home/xenomai/Desktop/LSDP13/Fase4/src/Alu.vhd Line: 18
+    Info (12023): Found entity 1: Alu File: /home/xenomai/Desktop/LSDP13/Fase4/src/Alu.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file src/IMemory.vhd
+    Info (12022): Found design unit 1: IMemory-Behavioral File: /home/xenomai/Desktop/LSDP13/Fase4/src/IMemory.vhd Line: 13
+    Info (12023): Found entity 1: IMemory File: /home/xenomai/Desktop/LSDP13/Fase4/src/IMemory.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file src/DMemory.vhd
+    Info (12022): Found design unit 1: DMemory-Behavioral File: /home/xenomai/Desktop/LSDP13/Fase4/src/DMemory.vhd Line: 13
+    Info (12023): Found entity 1: DMemory File: /home/xenomai/Desktop/LSDP13/Fase4/src/DMemory.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file src/ControlUnit.vhd
+    Info (12022): Found design unit 1: ControlUnit-Behavioral File: /home/xenomai/Desktop/LSDP13/Fase4/src/ControlUnit.vhd Line: 28
+    Info (12023): Found entity 1: ControlUnit File: /home/xenomai/Desktop/LSDP13/Fase4/src/ControlUnit.vhd Line: 4
+Info (12127): Elaborating entity "Datapath" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at Datapath.vhd(43): object "s_PC" assigned a value but never read File: /home/xenomai/Desktop/LSDP13/Fase4/src/Datapath.vhd Line: 43
+Info (12129): Elaborating entity "Pc" using architecture "A:behavioral" for hierarchy "Pc:pc" File: /home/xenomai/Desktop/LSDP13/Fase4/src/Datapath.vhd Line: 73
+Info (12129): Elaborating entity "IMemory" using architecture "A:behavioral" for hierarchy "IMemory:IMemory" File: /home/xenomai/Desktop/LSDP13/Fase4/src/Datapath.vhd Line: 84
+Info (12129): Elaborating entity "SignExtend" using architecture "A:behavioral" for hierarchy "SignExtend:SIG_EXTENDER" File: /home/xenomai/Desktop/LSDP13/Fase4/src/Datapath.vhd Line: 92
+Info (12129): Elaborating entity "Mux2_1" using architecture "A:behavioral" for hierarchy "Mux2_1:wa_mux" File: /home/xenomai/Desktop/LSDP13/Fase4/src/Datapath.vhd Line: 99
+Info (12129): Elaborating entity "Registers" using architecture "A:behavioral" for hierarchy "Registers:registers" File: /home/xenomai/Desktop/LSDP13/Fase4/src/Datapath.vhd Line: 109
+Info (12129): Elaborating entity "Mux2_1" using architecture "A:behavioral" for hierarchy "Mux2_1:alu_mux" File: /home/xenomai/Desktop/LSDP13/Fase4/src/Datapath.vhd Line: 125
+Info (12129): Elaborating entity "Alu" using architecture "A:behavioral" for hierarchy "Alu:alu" File: /home/xenomai/Desktop/LSDP13/Fase4/src/Datapath.vhd Line: 142
+Info (12129): Elaborating entity "DMemory" using architecture "A:behavioral" for hierarchy "DMemory:data_memory" File: /home/xenomai/Desktop/LSDP13/Fase4/src/Datapath.vhd Line: 166
+Info (276014): Found 2 instances of uninferred RAM logic
+    Info (276004): RAM logic "Registers:registers|s_ram" is uninferred due to inappropriate RAM size File: /home/xenomai/Desktop/LSDP13/Fase4/src/Registers.vhd Line: 22
+    Info (276007): RAM logic "DMemory:data_memory|s_ram" is uninferred due to asynchronous read logic File: /home/xenomai/Desktop/LSDP13/Fase4/src/DMemory.vhd Line: 16
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Alu:alu|Mult0" File: /home/xenomai/Desktop/LSDP13/Fase4/src/Alu.vhd Line: 44
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Alu:alu|Mult1" File: /home/xenomai/Desktop/LSDP13/Fase4/src/Alu.vhd Line: 47
+Info (12130): Elaborated megafunction instantiation "Alu:alu|lpm_mult:Mult0" File: /home/xenomai/Desktop/LSDP13/Fase4/src/Alu.vhd Line: 44
+Info (12133): Instantiated megafunction "Alu:alu|lpm_mult:Mult0" with the following parameter: File: /home/xenomai/Desktop/LSDP13/Fase4/src/Alu.vhd Line: 44
+    Info (12134): Parameter "LPM_WIDTHA" = "8"
+    Info (12134): Parameter "LPM_WIDTHB" = "8"
+    Info (12134): Parameter "LPM_WIDTHP" = "16"
+    Info (12134): Parameter "LPM_WIDTHR" = "16"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_aat.tdf
+    Info (12023): Found entity 1: mult_aat File: /home/xenomai/Desktop/LSDP13/Fase4/db/mult_aat.tdf Line: 29
+Info (12130): Elaborated megafunction instantiation "Alu:alu|lpm_mult:Mult1" File: /home/xenomai/Desktop/LSDP13/Fase4/src/Alu.vhd Line: 47
+Info (12133): Instantiated megafunction "Alu:alu|lpm_mult:Mult1" with the following parameter: File: /home/xenomai/Desktop/LSDP13/Fase4/src/Alu.vhd Line: 47
+    Info (12134): Parameter "LPM_WIDTHA" = "8"
+    Info (12134): Parameter "LPM_WIDTHB" = "8"
+    Info (12134): Parameter "LPM_WIDTHP" = "16"
+    Info (12134): Parameter "LPM_WIDTHR" = "16"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_73t.tdf
+    Info (12023): Found entity 1: mult_73t File: /home/xenomai/Desktop/LSDP13/Fase4/db/mult_73t.tdf Line: 29
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "inst[2]" is stuck at GND File: /home/xenomai/Desktop/LSDP13/Fase4/src/Datapath.vhd Line: 25
+    Warning (13410): Pin "inst[3]" is stuck at GND File: /home/xenomai/Desktop/LSDP13/Fase4/src/Datapath.vhd Line: 25
+    Warning (13410): Pin "inst[5]" is stuck at GND File: /home/xenomai/Desktop/LSDP13/Fase4/src/Datapath.vhd Line: 25
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 4137 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 15 input pins
+    Info (21059): Implemented 17 output pins
+    Info (21061): Implemented 4103 logic cells
+    Info (21062): Implemented 2 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 958 megabytes
+    Info: Processing ended: Wed Jun  3 07:21:32 2020
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:43
+
+

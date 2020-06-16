@@ -1,0 +1,1005 @@
+# do micro_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying /opt/altera/19.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {/home/xenomai/Desktop/LSDP13/Fase1_2_3/src/ControlUnit.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:16:43 on Jun 03,2020
+# vcom -reportprogress 300 -93 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/ControlUnit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Compiling entity ControlUnit
+# -- Compiling architecture Behavioral of ControlUnit
+# End time: 09:16:43 on Jun 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/ALU.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:17:01 on Jun 03,2020
+# vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ALU
+# -- Compiling architecture Behavioral of ALU
+# End time: 09:17:01 on Jun 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/ControlUnit.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:17:01 on Jun 03,2020
+# vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/ControlUnit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Compiling entity ControlUnit
+# -- Compiling architecture Behavioral of ControlUnit
+# End time: 09:17:01 on Jun 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/ControlUnit_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:17:01 on Jun 03,2020
+# vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/ControlUnit_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ControlUnit_tb
+# -- Compiling architecture Stimulus of ControlUnit_tb
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading entity ControlUnit
+# End time: 09:17:01 on Jun 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Datapath.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:17:01 on Jun 03,2020
+# vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Datapath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Datapath
+# -- Compiling architecture Behavioral of Datapath
+# ** Error: (vcom-11) Could not find work.pc.
+# ** Error (suppressible): /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Datapath.vhd(62): (vcom-1195) Cannot find expanded name "work.PC".
+# ** Error: /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Datapath.vhd(62): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.imemory.
+# ** Error (suppressible): /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Datapath.vhd(71): (vcom-1195) Cannot find expanded name "work.IMemory".
+# ** Error: /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Datapath.vhd(71): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.signextend.
+# ** Error (suppressible): /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Datapath.vhd(79): (vcom-1195) Cannot find expanded name "work.SignExtend".
+# ** Error: /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Datapath.vhd(79): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.mux2_1.
+# ** Error (suppressible): /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Datapath.vhd(86): (vcom-1195) Cannot find expanded name "work.Mux2_1".
+# ** Error: /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Datapath.vhd(86): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.registers.
+# ** Error (suppressible): /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Datapath.vhd(96): (vcom-1195) Cannot find expanded name "work.Registers".
+# ** Error: /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Datapath.vhd(96): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.mux2_1.
+# ** Error (suppressible): /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Datapath.vhd(112): (vcom-1195) Cannot find expanded name "work.Mux2_1".
+# ** Error: /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Datapath.vhd(112): Unknown expanded name.
+# -- Loading entity ALU
+# ** Error: (vcom-11) Could not find work.mux2_1.
+# ** Error (suppressible): /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Datapath.vhd(131): (vcom-1195) Cannot find expanded name "work.Mux2_1".
+# ** Error: /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Datapath.vhd(131): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.dmemory.
+# ** Error (suppressible): /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Datapath.vhd(143): (vcom-1195) Cannot find expanded name "work.DMemory".
+# ** Error: /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Datapath.vhd(143): Unknown expanded name.
+# ** Error: /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Datapath.vhd(153): VHDL Compiler exiting
+# End time: 09:17:02 on Jun 03,2020, Elapsed time: 0:00:01
+# Errors: 25, Warnings: 0
+vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Datapath_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:17:02 on Jun 03,2020
+# vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Datapath_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Datapath_tb
+# -- Compiling architecture Stimulus of Datapath_tb
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading entity Datapath
+# End time: 09:17:02 on Jun 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/DMemory.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:17:02 on Jun 03,2020
+# vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/DMemory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity DMemory
+# -- Compiling architecture Behavioral of DMemory
+# End time: 09:17:02 on Jun 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/DMemory_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:17:02 on Jun 03,2020
+# vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/DMemory_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity DMemory_tb
+# -- Compiling architecture testbench of DMemory_tb
+# -- Loading entity DMemory
+# End time: 09:17:02 on Jun 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/SignExtend.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:17:02 on Jun 03,2020
+# vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/SignExtend.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Compiling entity SignExtend
+# -- Compiling architecture Behavioral of SignExtend
+# End time: 09:17:02 on Jun 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Registers.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:17:02 on Jun 03,2020
+# vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Registers.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Registers
+# -- Compiling architecture Behavioral of Registers
+# End time: 09:17:02 on Jun 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/PC.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:17:02 on Jun 03,2020
+# vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/PC.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity PC
+# -- Compiling architecture Behavioral of PC
+# End time: 09:17:02 on Jun 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Mux2_1.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:17:02 on Jun 03,2020
+# vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Mux2_1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Mux2_1
+# -- Compiling architecture Behavioral of Mux2_1
+# End time: 09:17:02 on Jun 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Interconnect_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:17:02 on Jun 03,2020
+# vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Interconnect_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Interconnect_tb
+# -- Compiling architecture Stimulus of Interconnect_tb
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading entity Datapath
+# -- Loading entity ControlUnit
+# End time: 09:17:02 on Jun 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/IMemory.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:17:02 on Jun 03,2020
+# vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/IMemory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity IMemory
+# -- Compiling architecture Behavioral of IMemory
+# End time: 09:17:02 on Jun 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/ALU.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:17:03 on Jun 03,2020
+# vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ALU
+# -- Compiling architecture Behavioral of ALU
+# End time: 09:17:03 on Jun 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/ControlUnit.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:17:03 on Jun 03,2020
+# vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/ControlUnit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Compiling entity ControlUnit
+# -- Compiling architecture Behavioral of ControlUnit
+# End time: 09:17:03 on Jun 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/ControlUnit_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:17:03 on Jun 03,2020
+# vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/ControlUnit_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ControlUnit_tb
+# -- Compiling architecture Stimulus of ControlUnit_tb
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading entity ControlUnit
+# End time: 09:17:03 on Jun 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Datapath.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:17:03 on Jun 03,2020
+# vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Datapath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Datapath
+# -- Compiling architecture Behavioral of Datapath
+# -- Loading entity PC
+# -- Loading entity IMemory
+# -- Loading entity SignExtend
+# -- Loading entity Mux2_1
+# -- Loading entity Registers
+# -- Loading entity ALU
+# -- Loading entity DMemory
+# End time: 09:17:03 on Jun 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Datapath_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:17:03 on Jun 03,2020
+# vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Datapath_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Datapath_tb
+# -- Compiling architecture Stimulus of Datapath_tb
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading entity Datapath
+# End time: 09:17:03 on Jun 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/DMemory.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:17:04 on Jun 03,2020
+# vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/DMemory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity DMemory
+# -- Compiling architecture Behavioral of DMemory
+# End time: 09:17:04 on Jun 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/DMemory_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:17:04 on Jun 03,2020
+# vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/DMemory_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity DMemory_tb
+# -- Compiling architecture testbench of DMemory_tb
+# -- Loading entity DMemory
+# End time: 09:17:04 on Jun 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/SignExtend.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:17:04 on Jun 03,2020
+# vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/SignExtend.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Compiling entity SignExtend
+# -- Compiling architecture Behavioral of SignExtend
+# End time: 09:17:04 on Jun 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Registers.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:17:04 on Jun 03,2020
+# vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Registers.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Registers
+# -- Compiling architecture Behavioral of Registers
+# End time: 09:17:04 on Jun 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/PC.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:17:04 on Jun 03,2020
+# vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/PC.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity PC
+# -- Compiling architecture Behavioral of PC
+# End time: 09:17:04 on Jun 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Mux2_1.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:17:04 on Jun 03,2020
+# vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Mux2_1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Mux2_1
+# -- Compiling architecture Behavioral of Mux2_1
+# End time: 09:17:04 on Jun 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Interconnect_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:17:04 on Jun 03,2020
+# vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Interconnect_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Interconnect_tb
+# -- Compiling architecture Stimulus of Interconnect_tb
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading entity Datapath
+# -- Loading entity ControlUnit
+# End time: 09:17:04 on Jun 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/IMemory.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:17:04 on Jun 03,2020
+# vcom -reportprogress 300 -work work /home/xenomai/Desktop/LSDP13/Fase1_2_3/src/IMemory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity IMemory
+# -- Compiling architecture Behavioral of IMemory
+# End time: 09:17:04 on Jun 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.interconnect_tb
+# vsim work.interconnect_tb 
+# Start time: 09:17:08 on Jun 03,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading work.interconnect_tb(stimulus)
+# Loading work.datapath(behavioral)
+# Loading work.pc(behavioral)
+# Loading work.imemory(behavioral)
+# Loading work.signextend(behavioral)
+# Loading work.mux2_1(behavioral)
+# Loading work.registers(behavioral)
+# Loading work.alu(behavioral)
+# Loading work.dmemory(behavioral)
+# Loading work.controlunit(behavioral)
+add wave -position end  sim:/interconnect_tb/Datapath/AluOp
+add wave -position end  sim:/interconnect_tb/Datapath/inst
+add wave -position end  sim:/interconnect_tb/Datapath/s_inst
+add wave -position end  sim:/interconnect_tb/Datapath/s_inst_addr
+add wave -position end  sim:/interconnect_tb/Datapath/s_sig_extended
+add wave -position end  sim:/interconnect_tb/Datapath/s_WA
+add wave -position end  sim:/interconnect_tb/Datapath/s_MemtoRegData
+add wave -position end  sim:/interconnect_tb/Datapath/s_OP2
+add wave -position end  sim:/interconnect_tb/Datapath/s_res
+add wave -position end  sim:/interconnect_tb/Datapath/s_RD1
+add wave -position end  sim:/interconnect_tb/Datapath/s_RD2
+add wave -position end  sim:/interconnect_tb/Datapath/s_RD
+add wave -position end  sim:/interconnect_tb/Datapath/s_ENPC
+add wave -position end  sim:/interconnect_tb/Datapath/s_RegWr
+add wave -position end  sim:/interconnect_tb/Datapath/s_ALUSrc
+add wave -position end  sim:/interconnect_tb/Datapath/s_RegDst
+add wave -position end  sim:/interconnect_tb/Datapath/s_MemWr
+add wave -position end  sim:/interconnect_tb/Datapath/s_MemtoReg
+add wave -position end  sim:/interconnect_tb/Datapath/s_RI
+add wave -position end  sim:/interconnect_tb/Datapath/s_clk
+add wave -position end  sim:/interconnect_tb/Datapath/s_aluOp
+add wave -position 0  sim:/interconnect_tb/ControlUnit/rst
+add wave -position end  sim:/interconnect_tb/ControlUnit/opcode
+add wave -position end  sim:/interconnect_tb/ControlUnit/func
+add wave -position end  sim:/interconnect_tb/ControlUnit/EnPC
+add wave -position end  sim:/interconnect_tb/ControlUnit/RI
+add wave -position end  sim:/interconnect_tb/ControlUnit/RegWr
+add wave -position end  sim:/interconnect_tb/ControlUnit/RegDst
+add wave -position end  sim:/interconnect_tb/ControlUnit/ALUSrc
+add wave -position end  sim:/interconnect_tb/ControlUnit/ALUOp
+add wave -position end  sim:/interconnect_tb/ControlUnit/MemWr
+add wave -position end  sim:/interconnect_tb/ControlUnit/MemtoReg
+add wave -position end  sim:/interconnect_tb/ControlUnit/PS
+add wave -position end  sim:/interconnect_tb/ControlUnit/NS
+add wave -position end  sim:/interconnect_tb/ControlUnit/op
+add wave -position end  sim:/interconnect_tb/ControlUnit/op_next
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /interconnect_tb/Datapath/data_memory
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /interconnect_tb/Datapath/registers
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /interconnect_tb/Datapath/registers
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+run
+run
+run
+# ** Error: (vsim-86) Argument value -1 is not in bounds of subtype NATURAL.
+#    Time: 480 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Error: (vsim-86) Argument value -1 is not in bounds of subtype NATURAL.
+#    Time: 560 ns  Iteration: 4  Instance: /interconnect_tb/Datapath/alu
+run
+run
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 760 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 800 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 880 ns  Iteration: 4  Instance: /interconnect_tb/Datapath/alu
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# ** Error: (vsim-86) Argument value -1 is not in bounds of subtype NATURAL.
+#    Time: 1760 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Error: (vsim-86) Argument value -1 is not in bounds of subtype NATURAL.
+#    Time: 1840 ns  Iteration: 4  Instance: /interconnect_tb/Datapath/alu
+run
+run
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2040 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2080 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2160 ns  Iteration: 4  Instance: /interconnect_tb/Datapath/alu
+run
+run
+run
+run
+add wave -position 10  sim:/interconnect_tb/Datapath/data_memory/s_ram
+restart
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /interconnect_tb/Datapath/data_memory
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /interconnect_tb/Datapath/registers
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /interconnect_tb/Datapath/registers
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+run
+run
+run
+# ** Error: (vsim-86) Argument value -1 is not in bounds of subtype NATURAL.
+#    Time: 480 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Error: (vsim-86) Argument value -1 is not in bounds of subtype NATURAL.
+#    Time: 560 ns  Iteration: 4  Instance: /interconnect_tb/Datapath/alu
+run
+run
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 760 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 800 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 880 ns  Iteration: 4  Instance: /interconnect_tb/Datapath/alu
+run
+run
+run
+run
+run
+add wave -position end  sim:/interconnect_tb/Datapath/IMemory/RD
+add wave -position end  sim:/interconnect_tb/Datapath/registers/RA1
+add wave -position end  sim:/interconnect_tb/Datapath/registers/RA2
+add wave -position end  sim:/interconnect_tb/Datapath/registers/RD1
+add wave -position end  sim:/interconnect_tb/Datapath/registers/RD2
+add wave -position end  sim:/interconnect_tb/Datapath/registers/s_ram
+add wave -position end  sim:/interconnect_tb/Datapath/data_memory/s_ram
+add wave -position end sim:/interconnect_tb/ControlUnit/*
+restart
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /interconnect_tb/Datapath/data_memory
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /interconnect_tb/Datapath/registers
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /interconnect_tb/Datapath/registers
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+run
+run
+run
+# ** Error: (vsim-86) Argument value -1 is not in bounds of subtype NATURAL.
+#    Time: 480 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Error: (vsim-86) Argument value -1 is not in bounds of subtype NATURAL.
+#    Time: 560 ns  Iteration: 4  Instance: /interconnect_tb/Datapath/alu
+run
+run
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 760 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 800 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 880 ns  Iteration: 4  Instance: /interconnect_tb/Datapath/alu
+run
+run
+run
+run
+add wave -position 5  sim:/interconnect_tb/Datapath/s_res
+restart
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /interconnect_tb/Datapath/data_memory
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /interconnect_tb/Datapath/registers
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /interconnect_tb/Datapath/registers
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+run
+run
+run
+# ** Error: (vsim-86) Argument value -1 is not in bounds of subtype NATURAL.
+#    Time: 480 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Error: (vsim-86) Argument value -1 is not in bounds of subtype NATURAL.
+#    Time: 560 ns  Iteration: 4  Instance: /interconnect_tb/Datapath/alu
+run
+run
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 760 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 800 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 880 ns  Iteration: 4  Instance: /interconnect_tb/Datapath/alu
+run
+run
+run
+run
+run
+run
+add wave -position end  sim:/interconnect_tb/Datapath/data_memory/WD
+add wave -position end  sim:/interconnect_tb/Datapath/data_memory/WE
+add wave -position end  sim:/interconnect_tb/Datapath/data_memory/RD
+add wave -position end  sim:/interconnect_tb/Datapath/data_memory/s_ram
+add wave -position end sim:/interconnect_tb/Datapath/*
+add wave -position end sim:/interconnect_tb/ControlUnit/*
+restart
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /interconnect_tb/Datapath/data_memory
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /interconnect_tb/Datapath/registers
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /interconnect_tb/Datapath/registers
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+run
+run
+run
+# ** Error: (vsim-86) Argument value -1 is not in bounds of subtype NATURAL.
+#    Time: 480 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Error: (vsim-86) Argument value -1 is not in bounds of subtype NATURAL.
+#    Time: 560 ns  Iteration: 4  Instance: /interconnect_tb/Datapath/alu
+run
+run
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 760 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 800 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 880 ns  Iteration: 4  Instance: /interconnect_tb/Datapath/alu
+run
+run
+run
+run
+run
+add wave -position 15  sim:/interconnect_tb/Datapath/data_memory/WD
+add wave -position 15 sim:/interconnect_tb/Datapath/mem2reg/*
+restart
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /interconnect_tb/Datapath/data_memory
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /interconnect_tb/Datapath/registers
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /interconnect_tb/Datapath/registers
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+run
+run
+run
+# ** Error: (vsim-86) Argument value -1 is not in bounds of subtype NATURAL.
+#    Time: 480 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Error: (vsim-86) Argument value -1 is not in bounds of subtype NATURAL.
+#    Time: 560 ns  Iteration: 4  Instance: /interconnect_tb/Datapath/alu
+run
+run
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 760 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 800 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 880 ns  Iteration: 4  Instance: /interconnect_tb/Datapath/alu
+run
+run
+run
+run
+add wave -position end sim:/interconnect_tb/Datapath/*
+add wave -position end sim:/interconnect_tb/ControlUnit/*
+add wave -position 29  sim:/interconnect_tb/Datapath/registers/WD
+restart
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /interconnect_tb/Datapath/data_memory
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /interconnect_tb/Datapath/registers
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /interconnect_tb/Datapath/registers
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+run
+run
+run
+# ** Error: (vsim-86) Argument value -1 is not in bounds of subtype NATURAL.
+#    Time: 480 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Error: (vsim-86) Argument value -1 is not in bounds of subtype NATURAL.
+#    Time: 560 ns  Iteration: 4  Instance: /interconnect_tb/Datapath/alu
+run
+run
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 760 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 800 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 880 ns  Iteration: 4  Instance: /interconnect_tb/Datapath/alu
+run
+run
+run
+add wave -position end sim:/interconnect_tb/Datapath/registers/*
+add wave -position end sim:/interconnect_tb/Datapath/mem2reg/*
+add wave -position end sim:/interconnect_tb/Datapath/data_memory/*
+run
+restart
+add wave -position end sim:/interconnect_tb/ControlUnit/*
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /interconnect_tb/Datapath/data_memory
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /interconnect_tb/Datapath/registers
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /interconnect_tb/Datapath/registers
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+run
+run
+run
+# ** Error: (vsim-86) Argument value -1 is not in bounds of subtype NATURAL.
+#    Time: 480 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Error: (vsim-86) Argument value -1 is not in bounds of subtype NATURAL.
+#    Time: 560 ns  Iteration: 4  Instance: /interconnect_tb/Datapath/alu
+run
+run
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 760 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 800 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 880 ns  Iteration: 4  Instance: /interconnect_tb/Datapath/alu
+run
+add wave -position 8  sim:/interconnect_tb/Datapath/alu/s_result
+restart
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /interconnect_tb/Datapath/data_memory
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /interconnect_tb/Datapath/registers
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /interconnect_tb/Datapath/registers
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+run
+run
+run
+# ** Error: (vsim-86) Argument value -1 is not in bounds of subtype NATURAL.
+#    Time: 480 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Error: (vsim-86) Argument value -1 is not in bounds of subtype NATURAL.
+#    Time: 560 ns  Iteration: 4  Instance: /interconnect_tb/Datapath/alu
+run
+run
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 760 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 800 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 880 ns  Iteration: 4  Instance: /interconnect_tb/Datapath/alu
+run
+run
+run
+add wave -position end sim:/interconnect_tb/Datapath/*
+restart
+add wave -position end sim:/interconnect_tb/ControlUnit/*
+add wave -position 0  sim:/interconnect_tb/Datapath/data_memory/s_ram
+add wave -position 0  sim:/interconnect_tb/Datapath/registers/s_ram
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /interconnect_tb/Datapath/data_memory
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /interconnect_tb/Datapath/registers
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /interconnect_tb/Datapath/registers
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+run
+run
+run
+# ** Error: (vsim-86) Argument value -1 is not in bounds of subtype NATURAL.
+#    Time: 480 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Error: (vsim-86) Argument value -1 is not in bounds of subtype NATURAL.
+#    Time: 560 ns  Iteration: 4  Instance: /interconnect_tb/Datapath/alu
+run
+run
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 760 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 800 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 880 ns  Iteration: 4  Instance: /interconnect_tb/Datapath/alu
+run
+restart
+run
+run
+# Break key hit
+run -continue
+run -continue
+run -continue
+run -continue
+run -continue
+run
+run
+run
+run
+run
+run
+# ** Error: (vsim-86) Argument value -1 is not in bounds of subtype NATURAL.
+#    Time: 1760 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Error: (vsim-86) Argument value -1 is not in bounds of subtype NATURAL.
+#    Time: 1840 ns  Iteration: 4  Instance: /interconnect_tb/Datapath/alu
+run
+restart
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /interconnect_tb/Datapath/data_memory
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /interconnect_tb/Datapath/registers
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /interconnect_tb/Datapath/registers
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 2  Instance: /interconnect_tb/ControlUnit
+run
+run
+run
+# ** Error: (vsim-86) Argument value -1 is not in bounds of subtype NATURAL.
+#    Time: 480 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Error: (vsim-86) Argument value -1 is not in bounds of subtype NATURAL.
+#    Time: 560 ns  Iteration: 4  Instance: /interconnect_tb/Datapath/alu
+run
+run
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 760 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 800 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 880 ns  Iteration: 4  Instance: /interconnect_tb/Datapath/alu
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# ** Error: (vsim-86) Argument value -1 is not in bounds of subtype NATURAL.
+#    Time: 1760 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+run
+# ** Error: (vsim-86) Argument value -1 is not in bounds of subtype NATURAL.
+#    Time: 1840 ns  Iteration: 4  Instance: /interconnect_tb/Datapath/alu
+run
+run
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2040 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2080 ns  Iteration: 5  Instance: /interconnect_tb/Datapath/alu
+# 
+# stdin: <EOF>
+# End time: 13:37:06 on Jun 03,2020, Elapsed time: 4:19:58
+# Errors: 28, Warnings: 137, Suppressed Warnings: 88

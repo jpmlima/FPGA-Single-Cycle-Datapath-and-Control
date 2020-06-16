@@ -1,0 +1,42 @@
+|ControlUnit
+clk => op~1.DATAIN
+clk => PS~1.DATAIN
+rst => op.INVALID.OUTPUTSELECT
+rst => op.LW.OUTPUTSELECT
+rst => op.SW.OUTPUTSELECT
+rst => op.ADDI.OUTPUTSELECT
+rst => op.ARITH.OUTPUTSELECT
+rst => op.NOP.OUTPUTSELECT
+rst => PS~3.DATAIN
+opcode[0] => Equal0.IN5
+opcode[0] => Equal1.IN5
+opcode[0] => Equal2.IN5
+opcode[0] => Equal3.IN5
+opcode[0] => LessThan0.IN6
+opcode[1] => Equal0.IN4
+opcode[1] => Equal1.IN4
+opcode[1] => Equal2.IN4
+opcode[1] => Equal3.IN4
+opcode[1] => LessThan0.IN5
+opcode[2] => Equal0.IN3
+opcode[2] => Equal1.IN3
+opcode[2] => Equal2.IN3
+opcode[2] => Equal3.IN3
+opcode[2] => LessThan0.IN4
+func[0] => ALUOp.DATAB
+func[1] => ALUOp.DATAB
+func[2] => ALUOp.DATAB
+func[3] => ALUOp.DATAB
+EnPC <= EnPC.DB_MAX_OUTPUT_PORT_TYPE
+RI <= RI.DB_MAX_OUTPUT_PORT_TYPE
+RegWr <= RegWr.DB_MAX_OUTPUT_PORT_TYPE
+RegDst <= Selector2.DB_MAX_OUTPUT_PORT_TYPE
+ALUSrc <= Selector3.DB_MAX_OUTPUT_PORT_TYPE
+ALUOp[0] <= Selector7.DB_MAX_OUTPUT_PORT_TYPE
+ALUOp[1] <= Selector6.DB_MAX_OUTPUT_PORT_TYPE
+ALUOp[2] <= Selector5.DB_MAX_OUTPUT_PORT_TYPE
+ALUOp[3] <= Selector4.DB_MAX_OUTPUT_PORT_TYPE
+MemWr <= MemWr.DB_MAX_OUTPUT_PORT_TYPE
+MemtoReg <= MemtoReg.DB_MAX_OUTPUT_PORT_TYPE
+
+

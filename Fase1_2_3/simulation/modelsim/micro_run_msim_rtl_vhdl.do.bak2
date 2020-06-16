@@ -1,0 +1,16 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {/home/xenomai/Desktop/LSDP13/Fase1_2_3/src/SignExtend.vhd}
+vcom -93 -work work {/home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Registers.vhd}
+vcom -93 -work work {/home/xenomai/Desktop/LSDP13/Fase1_2_3/src/PC.vhd}
+vcom -93 -work work {/home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Mux2_1.vhd}
+vcom -93 -work work {/home/xenomai/Desktop/LSDP13/Fase1_2_3/src/IMemory.vhd}
+vcom -93 -work work {/home/xenomai/Desktop/LSDP13/Fase1_2_3/src/DMemory.vhd}
+vcom -93 -work work {/home/xenomai/Desktop/LSDP13/Fase1_2_3/src/Datapath.vhd}
+vcom -93 -work work {/home/xenomai/Desktop/LSDP13/Fase1_2_3/src/ALU.vhd}
+
