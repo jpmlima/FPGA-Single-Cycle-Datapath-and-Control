@@ -15,7 +15,7 @@ set_global_assignment -name VHDL_FILE ../rtl/cpu_pkg.vhd
 set_global_assignment -name VHDL_FILE ../rtl/program_pkg.vhd
 set_global_assignment -name VHDL_FILE ../rtl/mux2.vhd
 set_global_assignment -name VHDL_FILE ../rtl/sign_extend.vhd
-set_global_assignment -name VHDL_FILE ../rtl/pc.vhd
+set_global_assignment -name VHDL_FILE ../rtl/program_counter.vhd
 set_global_assignment -name VHDL_FILE ../rtl/reg_file.vhd
 set_global_assignment -name VHDL_FILE ../rtl/imem.vhd
 set_global_assignment -name VHDL_FILE ../rtl/dmem.vhd

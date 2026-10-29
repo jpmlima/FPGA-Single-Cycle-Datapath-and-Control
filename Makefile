@@ -8,7 +8,7 @@ RTL := \
 	rtl/program_pkg.vhd \
 	rtl/mux2.vhd \
 	rtl/sign_extend.vhd \
-	rtl/pc.vhd \
+	rtl/program_counter.vhd \
 	rtl/reg_file.vhd \
 	rtl/imem.vhd \
 	rtl/dmem.vhd \
@@ -16,6 +16,9 @@ RTL := \
 	rtl/control_unit.vhd \
 	rtl/datapath.vhd \
 	rtl/cpu.vhd
+
+# Signals are undefined until reset settles; ignore numeric_std warnings at t=0.
+RUNFLAGS := --ieee-asserts=disable-at-0
 
 TB    := tb/tb_alu.vhd tb/tb_cpu.vhd
 TESTS := tb_alu tb_cpu
@@ -30,12 +33,12 @@ analyze:
 
 $(TESTS): analyze
 	$(GHDL) -e $(GHDLFLAGS) $@
-	$(GHDL) -r $(GHDLFLAGS) $@ --assert-level=error
+	$(GHDL) -r $(GHDLFLAGS) $@ --assert-level=error $(RUNFLAGS)
 
 # Waveform of the full program run; open with GTKWave or Surfer.
 wave: analyze
 	$(GHDL) -e $(GHDLFLAGS) tb_cpu
-	$(GHDL) -r $(GHDLFLAGS) tb_cpu --wave=$(BUILD)/tb_cpu.ghw
+	$(GHDL) -r $(GHDLFLAGS) tb_cpu $(RUNFLAGS) --wave=$(BUILD)/tb_cpu.ghw
 	@echo "Waveform written to $(BUILD)/tb_cpu.ghw"
 
 clean:

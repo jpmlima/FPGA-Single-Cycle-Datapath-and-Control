@@ -4,7 +4,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity pc is
+entity program_counter is
   generic (
     WIDTH : positive := 8
   );
@@ -16,9 +16,9 @@ entity pc is
     next_pc : in  std_logic_vector(WIDTH - 1 downto 0);
     pc      : out std_logic_vector(WIDTH - 1 downto 0)
   );
-end entity pc;
+end entity program_counter;
 
-architecture rtl of pc is
+architecture rtl of program_counter is
   signal count : unsigned(WIDTH - 1 downto 0);
 begin
 

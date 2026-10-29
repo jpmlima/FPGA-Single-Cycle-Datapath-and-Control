@@ -39,7 +39,7 @@ begin
 
   -- Fetch ---------------------------------------------------------------
 
-  u_pc : entity work.pc
+  u_pc : entity work.program_counter
     generic map (WIDTH => DATA_WIDTH)
     port map (
       clk     => clk,

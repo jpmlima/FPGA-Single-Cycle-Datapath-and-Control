@@ -86,7 +86,7 @@ begin
 
     assert errors = 0
       report "tb_cpu: " & integer'image(errors) & " failure(s)" severity failure;
-    report "tb_cpu: program ran as expected (" & time'image(now) & ")";
+    report "tb_cpu: program ran as expected in " & integer'image(now / 1 ns) & " ns";
     done <= true;
     std.env.finish;
   end process;
