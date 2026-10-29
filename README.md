@@ -80,7 +80,7 @@ the final register and memory contents:
 
 ```
 tb/tb_alu.vhd:84:5:@18ns:(report note): tb_alu: all 18 vectors passed
-tb/tb_cpu.vhd:89:5:@630ns:(report note): tb_cpu: program ran as expected
+tb/tb_cpu.vhd:89:5:@630ns:(report note): tb_cpu: program ran as expected in 630 ns
 ```
 
 ## Synthesis
